@@ -6,8 +6,8 @@ import { HomeStyle } from "./home-style";
 const Home = () => {
   return (
     <HomeStyle aria-label="Projetos Github">
-      <SideBar />
-      <Projects />
+      <SideBar className="sidebar"/>
+      <Projects className='card'/>
     </HomeStyle>
   );
 };

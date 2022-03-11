@@ -4,6 +4,7 @@ import { MdLocationOn, MdEmail } from "react-icons/md";
 import { FiUser } from "react-icons/fi";
 
 const SideBar = () => {
+  // fazer requisição para api
   return (
     <SideBarStyle>
       <CardAvatar>

@@ -10,8 +10,8 @@ export const HomeStyle = styled.div`
     "sidebar card card card"
     "sidebar button  .    .";
     
-  /* justify-content: space-between; */
-  /* align-content:space-between; */
-  /* align-items: center; */
+  justify-content: space-between;
+  align-content:space-between;
+  align-items: center;
   gap: 2rem;
 `;
