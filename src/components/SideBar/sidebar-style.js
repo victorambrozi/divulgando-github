@@ -32,12 +32,12 @@ const CardAvatar = styled.div`
 
       > span {
         font-size: 1.8rem;
-        color: rgba(255, 255, 255, 62);
+        color: rgba(255, 255, 255, 62%);
       }
 
       h2 {
         font-size: 3.6rem;
-        color: rgba(255, 255, 255, 80);
+        color: rgba(255, 255, 255, 80%);
       }
 
     }
@@ -47,7 +47,7 @@ const CardAvatar = styled.div`
     margin: 6.4rem 0;
 
     ul {
-      color: rgba(255, 255, 255, 80);
+      color: rgba(255, 255, 255, 80%);
 
       > li {
         display: flex;
