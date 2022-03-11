@@ -36,6 +36,7 @@ const CardAvatar = styled.div`
       }
 
       h2 {
+        font-weight: 400;
         font-size: 3.6rem;
         color: rgba(255, 255, 255, 80%);
       }
