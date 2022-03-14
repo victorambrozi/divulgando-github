@@ -24,11 +24,6 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
-  img {
-    display: block;
-    max-width: 100%;
-  }
-
   a {
     text-decoration: none;
   }

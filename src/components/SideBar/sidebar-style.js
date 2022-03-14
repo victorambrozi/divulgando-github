@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const SideBarStyle = styled.div`
+
+  min-width: 35rem;
   border-radius: 2.5rem;
   background-color: #1d204b;
   color: #fff;
@@ -52,6 +54,7 @@ const CardAvatar = styled.div`
 
       > li {
         display: flex;
+        flex-wrap: nowrap;
         align-items: center;
         font-size: 2rem;
 

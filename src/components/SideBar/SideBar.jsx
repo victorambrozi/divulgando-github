@@ -1,9 +1,10 @@
 import React from "react";
 import { CardAvatar, SideBarStyle } from "./sidebar-style";
+import { IconContext } from "react-icons";
 import { MdLocationOn, MdEmail } from "react-icons/md";
 import { FiUser } from "react-icons/fi";
 
-const SideBar = () => {
+const SideBar = ({ className }) => {
   // fazer requisição para api
   return (
     <SideBarStyle>
@@ -19,20 +20,22 @@ const SideBar = () => {
           </div>
         </div>
         <div className="card card-bottom">
-          <ul>
-            <li>
-              <MdLocationOn color="#fff" size={30} />
-              <span>Salvador, BA</span>
-            </li>
-            <li>
-              <MdEmail color="#fff" size={30} />
-              <span>victorambrozi@gmail.com</span>
-            </li>
-            <li>
-              <FiUser color="#fff" size={30} />
-              <span>victorambrozi</span>
-            </li>
-          </ul>
+          <IconContext.Provider value={{ style: { minWidth: 30 } }}>
+            <ul>
+              <li>
+                <MdLocationOn color="#fff" size={30} />
+                <span>Salvador, BA</span>
+              </li>
+              <li>
+                <MdEmail color="#fff" size={30} />
+                <span>victorambrozi@gmail.com</span>
+              </li>
+              <li>
+                <FiUser color="#fff" size={30} />
+                <span>victorambrozi</span>
+              </li>
+            </ul>
+          </IconContext.Provider>
         </div>
       </CardAvatar>
       {/* <SideBarStyle */}

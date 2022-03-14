@@ -2,10 +2,9 @@ import React from "react";
 import { CardContent, CardStyle } from "./card-style";
 import { FaGithub } from "react-icons/fa";
 
-const Card = ({ className, props}) => {
-  const gridName = className === "card" ? className : "button";
+const Card = ({ props }) => {
   return (
-    <CardStyle className={gridName} background="#F78B64">
+    <CardStyle background="#F78B64">
       <div className="github-icon">
         <FaGithub color="rgba(0,0,0, 70%)" size={60} />
       </div>
@@ -15,7 +14,9 @@ const Card = ({ className, props}) => {
 
         <p>{props.description}</p>
 
-        <a href={props.html_url} target="_blank">Veja aqui</a>
+        <a href={props.html_url} target="_blank">
+          Veja aqui
+        </a>
       </CardContent>
     </CardStyle>
   );

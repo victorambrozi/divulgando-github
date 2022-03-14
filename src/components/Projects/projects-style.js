@@ -2,16 +2,20 @@ import { MdSkipPrevious } from "react-icons/md";
 import styled from "styled-components";
 
 const ProjectsStyle = styled.div`
+  height: 100%;
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: auto; */
-  align-items: center;
+  grid-template-columns: repeat(3, minmax(28.2rem, 1fr));
+  align-content: center;
   justify-content: center;
   gap: 2rem;
 
   /* overflow: hidden; */
 
   .pagination {
+    grid-column: span 3;
+    justify-self: end;
+
     width: 14.3rem;
     padding: 1.2rem;
 

@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 import { ProjectsStyle } from "./projects-style";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
-const Projects = ({ className }) => {
+const Projects = () => {
   const [githubData, setGithubData] = React.useState([]);
   const [pagination, setPagination] = React.useState(1);
   const [totalRepos, setTotalRepos] = React.useState(0);
@@ -34,10 +34,10 @@ const Projects = ({ className }) => {
   return (
     <ProjectsStyle previous={pagination === 1}>
       {githubData?.map((repo) => (
-        <Card key={repo.id} props={repo} className={className} />
+        <Card key={repo.id} props={repo} />
       ))}
 
-      <div className={`pagination ${className}`}>
+      <div className={`pagination`}>
         <div
           className="pagination-previous pagination-all"
           onClick={() => pagination > 0 && setPagination((old) => old - 1)}

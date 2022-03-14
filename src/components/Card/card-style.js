@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const CardStyle = styled.div`
+  width: 100%;
+  max-width: 45rem;
   border-radius: 2.5rem;
   background: ${(props) => props.background};
-  position: relative;
 
   .github-icon {
     margin-right: 3.2rem;
@@ -16,15 +17,13 @@ const CardStyle = styled.div`
 const CardContent = styled.div`
   padding: 3.2rem;
   width: 100%;
+  min-height: 23.5rem;
 
   background: #1d204b;
   border-radius: 1.5rem;
 
-  /* position: absolute;
-  top: 4.7rem; */
-
   h2 {
-    color: rgba(255,255,255, 80%);
+    color: rgba(255, 255, 255, 80%);
     font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -32,7 +31,7 @@ const CardContent = styled.div`
 
   p {
     margin: 3.2rem 0;
-    color: rgba(255,255,255, 80%);
+    color: rgba(255, 255, 255, 80%);
     font-size: 1.8rem;
   }
 
@@ -43,15 +42,15 @@ const CardContent = styled.div`
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: 300;
-    color: rgba(255,255,255, 80%);
+    color: rgba(255, 255, 255, 80%);
 
-    background: #5746EA;
+    background: #5746ea;
     border-radius: 1rem;
 
-    transition: .4s;
+    transition: 0.4s;
 
     &:hover {
-      filter: brightness(1.2)
+      filter: brightness(1.2);
     }
   }
 `;
