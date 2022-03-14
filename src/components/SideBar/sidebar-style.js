@@ -27,6 +27,8 @@ const CardAvatar = styled.div`
 
       border: 0.4rem solid #fff;
       border-radius: 50%;
+
+      overflow: hidden;
     }
 
     .content {
@@ -34,7 +36,7 @@ const CardAvatar = styled.div`
 
       > span {
         font-size: 1.8rem;
-        color: rgba(255, 255, 255, 62%);
+        color: rgba(255, 255, 255, 62%); 
       }
 
       h2 {
@@ -60,6 +62,16 @@ const CardAvatar = styled.div`
 
         span {
           margin-left: 1.5rem;
+
+          > a {
+            font-weight: 700;
+            color: rgba(255, 255, 255, 80%);
+            transition: .4s;
+
+            &:hover {
+              color: #fff;
+            }
+        }
         }
       }
 

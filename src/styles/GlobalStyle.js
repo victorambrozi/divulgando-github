@@ -19,6 +19,11 @@ const GlobalStyle = createGlobalStyle`
 
     background-color: #0D1323;
   }
+  
+  img {
+    display: block;
+    max-width: 100%
+  }
 
   ul {
     list-style: none;
