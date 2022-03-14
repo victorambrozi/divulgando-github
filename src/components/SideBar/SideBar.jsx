@@ -3,9 +3,14 @@ import { CardAvatar, SideBarStyle } from "./sidebar-style";
 import { IconContext } from "react-icons";
 import { MdLocationOn, MdEmail } from "react-icons/md";
 import { FiUser } from "react-icons/fi";
+import { api } from "../../services/api";
 
 const SideBar = ({ className }) => {
   // fazer requisição para api
+  React.useEffect(() => {
+    api.get()
+      .then(console.log)
+  }, [])
   return (
     <SideBarStyle>
       <CardAvatar>
