@@ -34,7 +34,7 @@ const Projects = () => {
   return (
     <ProjectsStyle previous={pagination === 1}>
       {githubData?.map((repo) => (
-        <Card key={repo.id} props={repo} />
+        <Card key={repo.id} props={repo} background={() => {}}/>
       ))}
 
       <div className={`pagination`}>

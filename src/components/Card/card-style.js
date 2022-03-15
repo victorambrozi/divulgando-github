@@ -36,6 +36,8 @@ const CardStyle = styled.div`
 const CardContent = styled.div`
   padding: 3.2rem;
   width: 100%;
+  min-height: 24rem;
+
 
   background: #1d204b;
   border-radius: 1.5rem;

@@ -2,10 +2,18 @@ import React from "react";
 import { CardContent, CardStyle } from "./card-style";
 import { FaGithub } from "react-icons/fa";
 
-const Card = ({ props }) => {
+const colors = ["#F78B64", "#56C2E5", "#F55F7D", "#4BCF83", "#7235D1", "#F1C75B"];
+
+const Card = ({ props, background }) => {
   const topBarGithub = React.useRef(null);
   const [styleTopbar, setStyleTopbar] = React.useState(false);
+  const [randomBg, setRandomBg] = React.useState("");
+  
+  const randomColor = () => Math.floor(Math.random() * colors.length);
+  React.useEffect(() => {
+    setRandomBg(colors[randomColor()]);
 
+  },[])
 
   function handleOver() {
     setStyleTopbar(true);
@@ -15,7 +23,7 @@ const Card = ({ props }) => {
     setStyleTopbar(false);
   }
   return (
-    <CardStyle background="#F78B64" topBar={styleTopbar}>
+    <CardStyle background={randomBg} topBar={styleTopbar}>
       <div className="github-icon" ref={topBarGithub}>
         <FaGithub color="rgba(0,0,0, 70%)" size={60} />
       </div>
