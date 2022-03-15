@@ -29,10 +29,19 @@ const ProjectsStyle = styled.div`
     .pagination-previous {
       display: flex;
       flex: 1;
+
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
     }
 
     .pagination-all {
       cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+        background: rgba(255,255,255, 15%);
+      }
+
     }
 
     .pagination-next {
@@ -41,6 +50,8 @@ const ProjectsStyle = styled.div`
       align-items: center;
       flex: 1;
 
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
       &::before {
         content: "";
         display: block;
