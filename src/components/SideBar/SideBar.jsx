@@ -9,13 +9,17 @@ import { api } from "../../services/api";
 const SideBar = ({ className }) => {
   const [dataSidebar, setDataSidebar] = React.useState({});
   // fazer requisição para api
-  React.useEffect(async () => {
-    try {
-      const response = await api.get();
-      setDataSidebar(response.data);
-    } catch (error) {
-      console.error(error);
+  React.useEffect(() => {
+    async function getApi() {
+      try {
+        const response = await api.get();
+        setDataSidebar(response.data);
+      } catch (error) {
+        console.error(error);
+      }
     }
+
+    getApi();
   }, []);
   return (
     <SideBarStyle>
@@ -36,7 +40,7 @@ const SideBar = ({ className }) => {
               <li>
                 <FaLinkedinIn color="#fff" size={30} />
                 <span>
-                  <a href={dataSidebar.blog} target="_blank">
+                  <a href={dataSidebar.blog} target="_blank" rel="noreferrer noopener">
                     victorambrozi
                   </a>
                 </span>
