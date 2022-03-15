@@ -43,7 +43,7 @@ const Projects = () => {
           onClick={() => pagination > 0 && setPagination((old) => old - 1)}
         >
           <MdKeyboardArrowLeft
-            color={pagination === 1 ? "red" : "blue"}
+            color={pagination === 1 ? "white" : "white"}
             size={30}
           />
         </div>
@@ -54,7 +54,7 @@ const Projects = () => {
           }
         >
           <MdKeyboardArrowRight
-            color={pagination === totalRepos ? "blue" : "red"}
+            color={pagination === totalRepos ? "white" : "white"}
             size={30}
           />
         </div>

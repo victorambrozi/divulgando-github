@@ -1,4 +1,3 @@
-import { MdSkipPrevious } from "react-icons/md";
 import styled from "styled-components";
 
 const ProjectsStyle = styled.div`
@@ -6,6 +5,7 @@ const ProjectsStyle = styled.div`
 
   display: grid;
   grid-template-columns: repeat(3, minmax(28.2rem, 1fr));
+  grid-template-rows: repeat(2, 30rem) 5rem;
   align-content: center;
   justify-content: center;
   gap: 2rem;
