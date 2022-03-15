@@ -34,7 +34,7 @@ const Card = ({ props, background }) => {
         <p>{props.description}</p>
 
         <div className="github-link">
-          <a href={props.html_url} target="_blank">
+          <a href={props.html_url} target="_blank" rel="noreferrer noopener">
             Veja aqui
           </a>
         </div>
