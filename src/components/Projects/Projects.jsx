@@ -9,13 +9,17 @@ const Projects = () => {
   const [pagination, setPagination] = React.useState(1);
   const [totalRepos, setTotalRepos] = React.useState(0);
 
-  React.useEffect(async () => {
-    try {
-      const response = await api.get(`/repos`);
-      setTotalRepos(Math.floor(response.data.length / 6));
-    } catch (error) {
-      console.error(error);
+  React.useEffect(() => {
+    async function getApi(){
+      try {
+        const response = await api.get(`/repos`);
+        setTotalRepos(Math.floor(response.data.length / 6));
+      } catch (error) {
+        console.error(error);
+      }
     }
+
+    getApi();
   }, []);
 
   const getPage = async () => {
