@@ -9,8 +9,9 @@ const Projects = () => {
   const [pagination, setPagination] = React.useState(1);
   const [totalRepos, setTotalRepos] = React.useState(0);
 
+  
   React.useEffect(() => {
-    async function getApi(){
+    const getApi = async () => {
       try {
         const response = await api.get(`/repos`);
         setTotalRepos(Math.floor(response.data.length / 6));
@@ -22,23 +23,25 @@ const Projects = () => {
     getApi();
   }, []);
 
-  const getPage = async () => {
-    try {
-      const response = await api.get(`/repos?per_page=6&page=${pagination}`);
-      setGithubData(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  
 
   React.useEffect(() => {
+    const getPage = async () => {
+      try {
+        const response = await api.get(`/repos?per_page=6&page=${pagination}`);
+        setGithubData(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    
     getPage();
   }, [pagination]);
 
   return (
-    <ProjectsStyle previous={pagination === 1}>
+    <ProjectsStyle >
       {githubData?.map((repo) => (
-        <Card key={repo.id} props={repo} background={() => {}}/>
+        <Card key={repo.id} props={repo} />
       ))}
 
       <div className={`pagination`}>
